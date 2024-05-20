@@ -55,8 +55,10 @@ prev.addEventListener('click', function () {
 
   if (currentImage > 0) {
     currentImage--; //decremento immagine corrente
-    setCurrentImage();
+  } else {
+    currentImage = images.length -1;
   }
+  setCurrentImage();
 });
 
 next.addEventListener('click', function () {
@@ -67,8 +69,10 @@ next.addEventListener('click', function () {
 
   if (currentImage < images.length - 1) {
     currentImage++; //incremento immagine corrente
-    setCurrentImage();
+  }  else {
+    currentImage = 0
   }
+  setCurrentImage();
 });
 
 function setCurrentImage() {
@@ -79,3 +83,6 @@ function setCurrentImage() {
   title.innerText = currentElement.title;
   description.innerText = currentElement.text;
 }
+
+//MS 2
+
